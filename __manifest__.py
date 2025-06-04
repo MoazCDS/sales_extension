@@ -1,0 +1,16 @@
+{
+    'name' : "sales_extension",
+    'description': "Sales Extention App",
+    'author' : "Moaz Elbahr",
+    'category': '',
+    'version': '17.0.0.1.0',
+    'depends': ['base', 'sale_management', 'crm','sales_team'],
+    'data': ["security/security.xml",
+        "security/ir.model.access.csv",
+        "views/sale_order_view.xml",
+        "views/menus_inherit_view.xml",
+        "views/custom_kanban_view.xml",
+        "reports/sales_extension_report.xml",
+    ],
+    'application': True,
+}

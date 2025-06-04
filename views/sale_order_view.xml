@@ -1,0 +1,44 @@
+<odoo>
+    <record id="sale_order_extension_view" model="ir.ui.view">
+        <field name="name">Sales Order Extension View</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="print_custom_pdf" string="Print" type="object" class="btn-primary"/>
+            </xpath>
+
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="total_products_qty" readonly="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="is_high_value"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_extension_tree_view" model="ir.ui.view">
+        <field name="name">Sales Order Extension Tree View</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="is_high_value" invisible="True"/>
+            </xpath>
+
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-danger">(is_high_value)</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_extension_report" model="ir.actions.report">
+        <field name="name">Sale Extension Report</field>
+        <field name="model">sale.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sales_extension.sales_extension_record_template</field>
+        <field name="binding_model_id" ref="model_sale_order"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
