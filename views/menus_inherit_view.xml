@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="sale.menu_sale_quotations" model="ir.ui.menu">
-        <field name="groups_id" eval="[(6, 0, [
-            ref('sales_team.group_sale_manager'),
-            ref('sales_team.group_sale_salesman_all_leads'),
-            ref('sales_team.group_sale_salesman'),
-            ref('sales_extension.group_sales_data_analyst')
-        ])]"
-        />
-    </record>
-
-
     <record id="sale.menu_sale_order" model="ir.ui.menu">
         <field name="groups_id" eval="[(6, 0, [
             ref('sales_team.group_sale_manager'),

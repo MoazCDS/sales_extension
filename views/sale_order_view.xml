@@ -11,10 +11,6 @@
             <xpath expr="//field[@name='payment_term_id']" position="after">
                 <field name="total_products_qty" readonly="1"/>
             </xpath>
-
-            <xpath expr="//field[@name='partner_id']" position="after">
-                <field name="is_high_value"/>
-            </xpath>
         </field>
     </record>
 
