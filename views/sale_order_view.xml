@@ -20,7 +20,11 @@
         <field name="inherit_id" ref="sale.view_order_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//tree" position="inside">
-                <field name="is_high_value" invisible="True"/>
+                <field name="is_high_value"/>
+            </xpath>
+
+            <xpath expr="//tree" position="inside">
+                <field name="total_products_qty"/>
             </xpath>
 
             <xpath expr="//tree" position="attributes">

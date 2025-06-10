@@ -4,7 +4,7 @@
     'author' : "Moaz Elbahr",
     'category': '',
     'version': '17.0.0.1.0',
-    'depends': ['base', 'sales_team', 'sale', 'account_payment', 'utm',],
+    'depends': ['base', 'sale'],
     'data': ["security/security.xml",
         "security/ir.model.access.csv",
         "views/sale_order_view.xml",
